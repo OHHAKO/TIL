@@ -11,13 +11,13 @@ Operating System Study (100-day challenge)
 ## 2020.06
 
 [Angular](https://github.com/subply) (project)<br/>
-Angular essentials <br/>
+Angular essentials, ES7 <br/>
 Butter knife crew 2020 (project)
 
 ## 2020.05
 
 [Angular](https://github.com/subply) (project)<br/>
-ES5~6 <br/>
+Angular essentials, ES5~6 <br/>
 
 ## 2020.04
 
@@ -28,8 +28,9 @@ Gastby (project)<br/>
 ## 2020.03
 
 [Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
-Hadoop Framework Study(Open Source test)
+Hadoop Framework Study(Open Source)
 
 ## 2020.01
 
+[Java](https://github.com/devilogu) (Toy project)
 ['Effective Java' Study](https://github.com/OHHAKO/effective-java-study)
