@@ -1,10 +1,15 @@
 # Today I Learn
 
+## 2020.08
+
+[Angular](https://github.com/subply) (project)<br/>
+[Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
+Operating System Study (100-day challenge)
+
 ## 2020.07
 
 [Angular](https://github.com/subply) (project)<br/>
 ['Angular essentials' Study](https://github.com/subply/Angular-study) <br/>
-Butter knife crew 2020 (project) <br/>
 [Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
 Operating System Study (100-day challenge)
 
