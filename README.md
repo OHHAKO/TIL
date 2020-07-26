@@ -11,7 +11,6 @@ GitLab 형상관리
 
 [Angular](https://github.com/subply) (project)<br/>
 ['Angular essentials' Study](https://github.com/subply/Angular-study) <br/>
-[Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
 Operating System Study (100-day challenge)<br/>
 GitLab 형상관리
 
