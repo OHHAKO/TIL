@@ -15,6 +15,11 @@ GitLab 형상관리
 Operating System Study (100-day challenge)<br/>
 GitLab 형상관리
 
+<br/>
+
+Conference <br/>
+우아한테크 세미나 2020
+
 ## 2020.06
 
 [Angular](https://github.com/subply) (project)<br/>
