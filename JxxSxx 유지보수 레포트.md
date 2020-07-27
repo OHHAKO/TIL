@@ -40,14 +40,22 @@
 
 ## 설치 목록
 - [x] jdk 1.8 -> 11
+
 - [ ] spring framework 5.0
+
 - [ ] maven
+
 - [ ] jquery 3.4.1
+
 - [ ] apache 2.4
+
 - [ ] Tomcat 9.0
+
 - [ ] mybatis
+
 - [ ] gitlab
-- [ ] 
+
+  
 
 참고 사이트
 
@@ -60,7 +68,7 @@
 
 1주차 
 
-시스템구조 파악
+시스템구조와 팀 작업 파악
 
 legacy environment setting in local
 
@@ -106,11 +114,17 @@ trouble shooting 기록
 
 
 
+## Trouble Shooting 
 
+7.27 
 
+9시반부터 5시반까지 초과근무 한 날. 기술자문 해주시는 분과 하루종일 즐거운 미팅했다. 자바 개발환경을 설치하는데 legacy의 jdk 버전과 VSCode가 요구하는 버전이 맞지 않아 삽질을 좀 한 것 같다. 
 
+- 저작권 문제로 OpenJDK 사용해야 함
 
+- VSCode가 최근 자바 개발 시 JDK 11이상을 요구하도록 업데이트 됨  
 
+- 삭제후 재설치 할 경우 이전 데이터 확실히 삭제할 것
 
-
+    
 
