@@ -9,18 +9,15 @@
 
 - 개발 환경 (문서참조)
 
-  -  FTP 서버 OS: 
-  - legacy/boot 구분 (boot로 추측):
+  -  FTP 서버 OS: linux
+  - legacy/boot/sts 구분 : legacy로 확인
   - Database : mysql
   - 배포: AWS lightsail
   - 테스터: Aws svn (접근불가)
 
 - 시스템구조 (문서참조)
 
-  
-
 - 필요 작업: 원격 서버의 개발환경과 프로젝트를 on-premise에 그대로 설치한 후 gitlab에서 버전 및 형상관리
-
 
 
 ## 경험 회고
@@ -40,6 +37,13 @@
    - 추측=> Spring Boot extension pack
 6.  maven 설치
 7. 관련 종속성 설치
+
+## 설치 목록
+- [ ] jdk 1.8
+- [ ] spring framework 5.0
+- [ ] apache 2.4
+- [ ] Tomcat 9.0
+- [ ] jquery 3.4.1
 
 
 
