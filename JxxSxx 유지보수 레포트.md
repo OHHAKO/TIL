@@ -39,11 +39,13 @@
 7. 관련 종속성 설치
 
 ## 설치 목록
-- [ ] jdk 1.8
+- [x] jdk 1.8
 - [ ] spring framework 5.0
+- [ ] maven
+- [ ] jquery 3.4.1
 - [ ] apache 2.4
 - [ ] Tomcat 9.0
-- [ ] jquery 3.4.1
+- [ ] mybatis
 
 
 
