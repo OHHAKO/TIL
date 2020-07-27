@@ -39,20 +39,78 @@
 7. 관련 종속성 설치
 
 ## 설치 목록
-- [x] jdk 1.8
+- [x] jdk 1.8 -> 11
 - [ ] spring framework 5.0
 - [ ] maven
 - [ ] jquery 3.4.1
 - [ ] apache 2.4
 - [ ] Tomcat 9.0
 - [ ] mybatis
-
-
-
----
+- [ ] gitlab
+- [ ] 
 
 참고 사이트
 
 - VSCODE 환경 SpringBoot 개발환경  https://parkdream.tistory.com/95
 - Oracle jdk 설치  https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
+
+
+## 작업일정
+
+1주차 
+
+시스템구조 파악
+
+legacy environment setting in local
+
+devOps 문서화
+
+gitlab gitflow 문서화
+
+issue 해결
+
+trouble shooting 기록
+
+
+
+2주차 
+
+issue 해결
+
+trouble shooting 기록
+
+
+
+3주차
+
+issue 해결 
+
+trouble shooting 기록
+
+
+
+4주차 
+
+issue 해결
+
+trouble shooting 기록
+
+
+
+5주차
+
+issue 해결
+
+trouble shooting 기록
+
+
+
+
+
+
+
+
+
+
 
