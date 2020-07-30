@@ -38,20 +38,11 @@
 ## 설치 목록
 
 - [x] jdk 1.8 -> 11
-
+- [x] gitlab
 - [ ] spring framework 5.0
-
 - [ ] maven
-
-- [ ] jquery 3.4.1
-
-- [ ] apache 2.4
-
-- [ ] Tomcat 9.0
-
+- [ ] Tomcat 9.0 (apache 2.4)
 - [ ] mybatis
-
-- [ ] gitlab
 
 참고 사이트
 
@@ -73,30 +64,35 @@ gitlab gitflow 문서화
 issue 해결
 
 trouble shooting 기록
+<br/><br/>
 
 2주차
 
 issue 해결
 
 trouble shooting 기록
+<br/><br/>
 
 3주차
 
 issue 해결
 
 trouble shooting 기록
+<br/><br/>
 
 4주차
 
 issue 해결
 
 trouble shooting 기록
+<br/><br/>
 
 5주차
 
 issue 해결
 
 trouble shooting 기록
+<br/><br/>
 
 ## Trouble Shooting
 
@@ -109,3 +105,124 @@ trouble shooting 기록
 - VSCode가 최근 자바 개발 시 JDK 11이상을 요구하도록 업데이트 됨
 
 - 삭제후 재설치 할 경우 이전 데이터 확실히 삭제할 것
+
+  7.28
+  한 시간 정도 일찍 왔다. 프로젝트를 로컬로 받아오기 위해 aws 서버에 gitlab을 설치했다.
+  remote 저장소에서 clone, push 하는데 에러가 발생했다.
+
+clone시 에러 메세지
+
+```
+The authenticity of host 'gitlab.com (172.65.251.78)' can't be established.
+ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+yes 진행했더니 뜬 에러 메세지
+
+```
+Cloning into 'jungle_front'...
+The authenticity of host 'gitlab.com (172.65.251.78)' can't be established.
+ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'gitlab.com,172.65.251.78' (ECDSA) to the list of known hosts.
+git@gitlab.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+```
+
+에러 메세지로 추측되는 정황은 세 가지.
+
+1. 유저의 ssh가 등록되지 않아 컴퓨터에서 접근할 수 없음 (그러기엔 이미 ssh를 등록한 상태였음)
+2. 로컬에서 유저정보가 틀려 인식되지 않음
+3. 다른 문제다.
+
+username을 변경하고 다시 clone하니 에러 메세지가 줄었다.
+
+```
+Cloning into 'jungle_front'...
+git@gitlab.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+이 상태에서 clone 대상을 https에서 ssh로 변경하고 다시 clone 했더니 이미 있는 remote라고 떴다.
+바로 `git remote -v`로 확인해보니 원격 저장소와 연결이 된 것을 확인했다.
+
+그리고 로컬에서 push하는데 다시 에러 발생.
+
+```
+git@gitlab.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+`~/.ssh`에 ssh-keygen을 생성하고 user Setting에서 public key를 등록했더니 잘 동작되었다.
+결국 key는 두개가 등록된 셈이다. 다시 push 시도. 그리고 또 발생한 에러메세지.
+
+```
+ubuntu@ip-172-26-6-237:~/git/jungle_front$ git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 442 bytes | 442.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote: GitLab:
+remote: A default branch (e.g. master) does not yet exist for stayjungle/jungle_front
+remote: Ask a project Owner or Maintainer to create a default branch:
+remote:
+remote:   https://gitlab.com/stayjungle/jungle_front/-/project_members
+remote:
+To gitlab.com:stayjungle/jungle_front.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@gitlab.com:stayjungle/jungle_front.git'
+```
+
+저장소 권한 문제였다. master 브랜치를 생성하려면 원격 저장소 관리자에게 요청해 user 권한을 Maintainer or Owner로 바꾸어야 한다.
+그리고 push에 성공했다.
+
+### GitLab에서 clone, push가 안될 때
+
+fingerprint, git config global, 저장소 접근권한 문제일 수 있다.
+
+- 저장소를 clone하려면 `ssh-keygen` 생성, gitlab user settings에 ssh 등록을 해야한다.
+- 로컬에서 git config name,email을 바르게 썼는지 확인하라
+- 저장소에 처음 master 브랜치를 생성할 수 있는 권한은 Maintainer, Owner 에게만 주어진다. (dev 해당없음)
+
+프로젝트에 저장소를 올리려는데 두 가지 웹플리케이션이 각각 front, back로 나뉘어 총 4개의 폴더를 유지하고 있었다.
+왜 하나의 웹앱을 front,bak 폴더로 나뉘었는진 잘 모르겠지만.. 원격 저장소에 각각 올려야 할지 묶어 올려야 할지 고민됐다.
+front,back 둘다 각 pom.xml를 갖고 있었지만
+ide이 자동으로 생성해주는 .project, .settings, .classpath, .springBeans는 back 폴더에만 있어 심히 고민되었다.
+계속...
+
+7.29
+ide가 자동으로 생성해주는 파일은 프로젝트 이전시 빼야한다는 의견이 있었다. 그래서 .gitignore를 사용해 제외시켰다. 근데 이건 항상 적용되진 않는다. 레가시 프로젝트 환경 조성시 VSCode는 OS와 무관하므로 어떤 환경에서도 원본 IDE 자동생성 파일을 그대로 사용해도 된다.
+VSCode는 운영체제와 관련이 없으니 그대로 가져다 쓰면 되므로 .gitignore를 삭제하고 원격 저장소에 올렸다.
+
+back 프로젝트 테스팅 도중 발견한 것들
+
+- tomcat 실행시 에러 발생
+- .java에서 getter/setter 인식 안되는 문제 (pom.xml 종속성 문제로 추측)
+- VSCode는 OS와 무관하므로 IDE 자동생성 파일 그대로 사용 가능
+- 프로젝트 모두 gitlab 저장소에 업로드
+- jdk에는 컴파일러가 내장되어 있으며 컴파일 하면 .java가 .class로 변환된다.
+- maven으로 빌드하고나면 결과로 war 파일이 산출되는데 .class의 번들이다.
+
+  7.30
+
+* 종속성 문제로 기존 설치를 모두 지우고 다시 설치했다. (openjdk-13_window-x64.zip,apache-maven-3.6.3,apache-tomcat-9.0.36-windows-x64)
+* VSCode 설치 확장팩 install(Checkstyle for java,java dpdency viewr,java extension pack, javascript (es6) code snippets, maven for java, tomcat for java)
+* front app을 root로 vscode를 실행해야 한다.
+* maven필드 아래 프로젝트를 clean,install,package 해서 모두 BUILD SUCCESS 해야 war이 만들어진다.
+* target하위에 생성된 ROOT.war를 tomcat에 배포한다.
+* Connector와 Server의 port가 달라야 셧다운시 정상종료 된다.
+
+다른pc 환경셋팅 중 발생한 문제
+
+- 설치 및 환경변수 설정이 끝난 후 VSCode에서 tomcat 실행 에러
+- 예전처럼 .java에서 getter/setter 인식 실패
+- cmd에서 tomcat실행 후 localhost:8080이 잘 떴으나 VSCode의 output에서 에러 발생
+- VSCode output 인코딩 실패로 한글이 깨져 선웅님과 trouble shooting 진행이 안됨
