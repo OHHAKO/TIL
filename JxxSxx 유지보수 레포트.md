@@ -39,10 +39,10 @@
 
 - [x] jdk 1.8 -> 11
 - [x] gitlab
-- [ ] spring framework 5.0
-- [ ] maven
-- [ ] Tomcat 9.0 (apache 2.4)
-- [ ] mybatis
+- [x] maven
+- [x] Tomcat 9.0 (apache 2.4)
+- [ ] <strike> spring framework 5.0 </strike> 무관
+- [ ] <strike> mybatis </strike> 무관
 
 참고 사이트
 
