@@ -1,7 +1,5 @@
 # JxxSxx 유지보수 보고서
 
-
-
 ## 상태 레포트
 
 - 개발 현황: FTP-simple로 원격 서버에 접속해 파일을 추가하거나 수정하고 있음.
@@ -9,7 +7,7 @@
 
 - 개발 환경 (문서참조)
 
-  -  FTP 서버 OS: linux
+  - FTP 서버 OS: linux
   - legacy/boot/sts 구분 : legacy로 확인
   - Database : mysql
   - 배포: AWS lightsail
@@ -19,12 +17,11 @@
 
 - 필요 작업: 원격 서버의 개발환경과 프로젝트를 on-premise에 그대로 설치한 후 gitlab에서 버전 및 형상관리
 
-
 ## 경험 회고
 
-기존에 내가 알던 Spring의 디렉토리 구조와 프로젝트 루트의 모듈들이 달라 에코시스템을 파악하기가 어려웠다. 내가 전에 경험했던 Spring은 이클립스에서 legacy Spring project를 생성하여 maven으로 종속 모듈을 설치했다. 그런데 FTP로 확인한 프로젝트 폴더는 두개의 프로젝트가 혼합되어 있었는데 다소 복잡한 디렉토리와 생소한 모듈번들로 인해 경로를 열때마다 아찔함을 경험했다. 
+기존에 내가 알던 Spring의 디렉토리 구조와 프로젝트 루트의 모듈들이 달라 에코시스템을 파악하기가 어려웠다. 내가 전에 경험했던 Spring은 이클립스에서 legacy Spring project를 생성하여 maven으로 종속 모듈을 설치했다. 그런데 FTP로 확인한 프로젝트 폴더는 두개의 프로젝트가 혼합되어 있었는데 다소 복잡한 디렉토리와 생소한 모듈번들로 인해 경로를 열때마다 아찔함을 경험했다.
 
-일단 Visual studio에서 Spring legacy 프로젝트를 생성하여 Spring 관련 모듈을 설치하고 maven으로 종속성 관리를 하고 있었다. 
+일단 Visual studio에서 Spring legacy 프로젝트를 생성하여 Spring 관련 모듈을 설치하고 maven으로 종속성 관리를 하고 있었다.
 
 ## 프로젝트 이전 방법
 
@@ -35,10 +32,11 @@
 4. Jdk 1.8 설치 +환경변수 설정
 5. spring(boot 경우 tomcat 내장)
    - 추측=> Spring Boot extension pack
-6.  maven 설치
+6. maven 설치
 7. 관련 종속성 설치
 
 ## 설치 목록
+
 - [x] jdk 1.8 -> 11
 
 - [ ] spring framework 5.0
@@ -55,18 +53,14 @@
 
 - [ ] gitlab
 
-  
-
 참고 사이트
 
-- VSCODE 환경 SpringBoot 개발환경  https://parkdream.tistory.com/95
-- Oracle jdk 설치  https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
-
-
+- VSCODE 환경 SpringBoot 개발환경 https://parkdream.tistory.com/95
+- Oracle jdk 설치 https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
 
 ## 작업일정
 
-1주차 
+1주차
 
 시스템구조와 팀 작업 파악
 
@@ -80,31 +74,23 @@ issue 해결
 
 trouble shooting 기록
 
-
-
-2주차 
+2주차
 
 issue 해결
 
 trouble shooting 기록
-
-
 
 3주차
 
-issue 해결 
-
-trouble shooting 기록
-
-
-
-4주차 
-
 issue 해결
 
 trouble shooting 기록
 
+4주차
 
+issue 해결
+
+trouble shooting 기록
 
 5주차
 
@@ -112,19 +98,14 @@ issue 해결
 
 trouble shooting 기록
 
+## Trouble Shooting
 
+7.27
 
-## Trouble Shooting 
-
-7.27 
-
-9시반부터 5시반까지 초과근무 한 날. 기술자문 해주시는 분과 하루종일 즐거운 미팅했다. 자바 개발환경을 설치하는데 legacy의 jdk 버전과 VSCode가 요구하는 버전이 맞지 않아 삽질을 좀 한 것 같다. 
+9시반부터 5시반까지 초과근무 한 날. 기술자문 해주시는 분과 하루종일 즐거운 미팅했다. 자바 개발환경을 설치하는데 legacy의 jdk 버전과 VSCode가 요구하는 버전이 맞지 않아 삽질을 좀 한 것 같다.
 
 - 저작권 문제로 OpenJDK 사용해야 함
 
-- VSCode가 최근 자바 개발 시 JDK 11이상을 요구하도록 업데이트 됨  
+- VSCode가 최근 자바 개발 시 JDK 11이상을 요구하도록 업데이트 됨
 
 - 삭제후 재설치 할 경우 이전 데이터 확실히 삭제할 것
-
-    
-
