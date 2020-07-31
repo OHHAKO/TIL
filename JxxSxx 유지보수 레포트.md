@@ -226,3 +226,14 @@ back 프로젝트 테스팅 도중 발견한 것들
 - 예전처럼 .java에서 getter/setter 인식 실패
 - cmd에서 tomcat실행 후 localhost:8080이 잘 떴으나 VSCode의 output에서 에러 발생
 - VSCode output 인코딩 실패로 한글이 깨져 선웅님과 trouble shooting 진행이 안됨
+
+7.31
+- pc환경설정 셋팅 완료
+
+알아봐야 할 것
+
+- 폴더구조 파악하기
+- 라이브러리 사용법
+- maven에서 clean,install,package 3단계 수동으로 빌드하여 tomcat에 올리는 불편함이 있음. 자동화 시킬 수 있는 방법
+- 혹은 jsp 수정후에 배포되어있는 페이지에 바로 반영시킬 수 있는 방법
+- 커밋 컨벤션
