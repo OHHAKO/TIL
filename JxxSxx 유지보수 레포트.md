@@ -53,17 +53,20 @@
 
 1주차
 
-시스템구조와 팀 작업 파악
+<strike>시스템구조와 팀 작업 파악</strike>
 
-legacy environment setting in local
+<strike>legacy environment setting in local</strike>
+
+<strike>issue 해결</strike>
+
+<strike>trouble shooting 기록</strike>
 
 devOps 문서화
 
 gitlab gitflow 문서화
 
-issue 해결
 
-trouble shooting 기록
+
 <br/><br/>
 
 2주차
@@ -94,7 +97,7 @@ issue 해결
 trouble shooting 기록
 <br/><br/>
 
-## Trouble Shooting
+## 작업일지 및 Trouble Shooting
 
 7.27
 
