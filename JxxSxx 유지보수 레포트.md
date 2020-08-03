@@ -236,4 +236,12 @@ back 프로젝트 테스팅 도중 발견한 것들
 - 라이브러리 사용법 ([owl-example option사용법 등](https://m.blog.naver.com/PostView.nhn?blogId=blontenote&logNo=30183353169&proxyReferer=https:%2F%2Fwww.google.com%2F) )
 - maven에서 clean,install,package 3단계 수동으로 빌드하여 tomcat에 올리는 불편함이 있음. 자동화 시킬 수 있는 방법
 - 혹은 jsp 수정후에 배포되어있는 페이지에 바로 반영시킬 수 있는 방법
-- 커밋 컨벤션
+- github 사용방법 설명함
+
+
+
+8.31
+
+- React-native 전환/ui,ux 미팅/ 뀨님 미팅
+- url에 resource path가 노출되는 문제 해결. url에 요청은 제대로 했는데 도착한 웹페이지의 주소에 .do와 같은 확장자가 붙어있었다. 웹 관리자도구에서 network를 열어보니 ~.do 의 url 주소가 요청되고 있는 것이 아닌가. DNS 서비스,레코드나 web.xml에서 servlet-mapping 문제, welcome-file 등이 문제인 줄 알았는데 `RequestMapping` 문제였다. 전 담당자가 일부러 지금같은 path가 노출되도록 의도한 것 이였고 현재 노출된 path는 실제 resource 이름이 아니였다. 그래서 수정하지 않아도 됐지만 깔끔한 path를 원했으므로 25개의 파일에서 호출된 해당 경로에서(controller의 RequestMapping, return 경로 값) 값을 변경시켰다.
+

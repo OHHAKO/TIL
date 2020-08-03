@@ -19,4 +19,4 @@
 
   - `UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1) (node:1096) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.`
 
-  - 최종적으로 라이브러리에서 에러가 발생했따는 건...버전이 맞지 않다는 의미이다. 라이브러리처럼 외부에서 받은 코드는 직접 고치지 않는게 좋다. 정말 라이브러리 문제가 확실하다면 해당 라이브러리에 PR을 보내는 식으로 해결하는게 좋다. 그 순서란 1) 해당 라이브러리를 fork해서 고친다음 원래 라이브 대 신 fork해서 고친 내 라이브러리를 다시 설치하는 방법 2)더 간단한 임시방편으로 땜빵을 하려면 몽키패치를 해서 동적으로 코드를 바꿔치기 하는 방법. (JS나 파이썬 같은 코드는 몽키패치 하기가 편하다)
+  - 최종적으로 라이브러리에서 에러가 발생했다는 건. 버전이 맞지 않다는 의미이다. 라이브러리처럼 외부에서 받은 코드는 직접 고치지 않는게 좋다. 정말 라이브러리 문제가 확실하다면 해당 라이브러리에 PR을 보내는 식으로 해결하는게 좋다. 그 순서란 1) 해당 라이브러리를 fork해서 고친다음 원래 라이브 대 신 fork해서 고친 내 라이브러리를 다시 설치하는 방법 2)더 간단한 임시방편으로 땜빵을 하려면 몽키패치를 해서 동적으로 코드를 바꿔치기 하는 방법. (JS나 파이썬 같은 코드는 몽키패치 하기가 편하다)
