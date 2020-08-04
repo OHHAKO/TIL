@@ -233,14 +233,11 @@ back 프로젝트 테스팅 도중 발견한 것들
 7.31
 - pc환경설정 셋팅 완료
 
-알아봐야 할 것
-
 - 폴더구조 파악하기
-- 라이브러리 사용법 ([owl-example option사용법 등](https://m.blog.naver.com/PostView.nhn?blogId=blontenote&logNo=30183353169&proxyReferer=https:%2F%2Fwww.google.com%2F) )
-- maven에서 clean,install,package 3단계 수동으로 빌드하여 tomcat에 올리는 불편함이 있음. 자동화 시킬 수 있는 방법
+- Owl caraousel 라이브러리 사용법 ([owl-example option사용법 등](https://m.blog.naver.com/PostView.nhn?blogId=blontenote&logNo=30183353169&proxyReferer=https:%2F%2Fwww.google.com%2F) )
+- maven에서 clean,install,package 3단계 수동으로 빌드하여 tomcat에 올리는 불편함이 있음. 자동화 시킬 수 있는 방법 필요.
 - 혹은 jsp 수정후에 배포되어있는 페이지에 바로 반영시킬 수 있는 방법
 - github 사용방법 설명함
-
 
 
 8.3
