@@ -243,8 +243,16 @@ back 프로젝트 테스팅 도중 발견한 것들
 
 
 
-8.31
+8.3
 
 - React-native 전환/ui,ux 미팅/ 뀨님 미팅
 - url에 resource path가 노출되는 문제 해결. url에 요청은 제대로 했는데 도착한 웹페이지의 주소에 .do와 같은 확장자가 붙어있었다. 웹 관리자도구에서 network를 열어보니 ~.do 의 url 주소가 요청되고 있는 것이 아닌가. DNS 서비스,레코드나 web.xml에서 servlet-mapping 문제, welcome-file 등이 문제인 줄 알았는데 `RequestMapping` 문제였다. 전 담당자가 일부러 지금같은 path가 노출되도록 의도한 것 이였고 현재 노출된 path는 실제 resource 이름이 아니였다. 그래서 수정하지 않아도 됐지만 깔끔한 path를 원했으므로 25개의 파일에서 호출된 해당 경로에서(controller의 RequestMapping, return 경로 값) 값을 변경시켰다.
+
+8.4
+
+- .svn 지우고도 빌드/실행 잘되므로 서버로컬에서 .svn를 삭제하고 명령쉘 스크립트에서 svn명령어 지움
+- main페이지 주소에 경로 노출 안보이게 설정. welcome-file에 등록된 index.jsp에서 url 이동없이 main.jsp로 forward 시켰다.
+- CSS 미디어쿼리 수정. 타블렛에서도 navbar 보이도록 함(Chrome toggle Device Toolbar)
+- gitlab에 PR 보내고 prove, merge 하기
+
 
