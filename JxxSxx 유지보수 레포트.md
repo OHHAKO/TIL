@@ -302,8 +302,11 @@ back 프로젝트 테스팅 도중 발견한 것들
 - 클라이언트와 기획 미팅
 
 8.12
-- 기술 자문회의
-- React와 Redux 스터디
+- 기술 자문회의 (React와 Redux 세미나)
+- wiki에 commit convention 작성
+
+유지보수 알바에서 새 프로젝트 개발자로 본격적으로 투입될 것 같다.
+Coding Convention, React 컴포넌트 기반 개발, nextJS, Redux(+Saga), reverse proxy 등 앞으로 공부해야 하는 것들.
 
 
 
