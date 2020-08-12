@@ -2,17 +2,19 @@
 
 ## 2020.08
 
-[Angular](https://github.com/subply) (project)<br/>
 [Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
-Operating System Study (100-day challenge)<br/>
-GitLab 형상관리
+GitLab 형상관리 <br/>
+Spring 프론트단 유지보수 <br/>
+React (redux, redux-saga, nextJs) <br/>
+
 
 ## 2020.07
 
 [Angular](https://github.com/subply) (project)<br/>
 ['Angular essentials' Study](https://github.com/subply/Angular-study) <br/>
 Operating System Study (100-day challenge)<br/>
-GitLab 형상관리
+GitLab 형상관리 <br/>
+Spring 프론트단 유지보수
 
 <br/>
 
