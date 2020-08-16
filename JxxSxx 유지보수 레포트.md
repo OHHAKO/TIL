@@ -65,8 +65,6 @@ devOps 문서화
 
 gitlab gitflow 문서화
 
-
-
 <br/><br/>
 
 2주차
@@ -230,7 +228,8 @@ back 프로젝트 테스팅 도중 발견한 것들
 - cmd에서 tomcat실행 후 localhost:8080이 잘 떴으나 VSCode의 output에서 에러 발생
 - VSCode output 인코딩 실패로 한글이 깨져 선웅님과 trouble shooting 진행이 안됨
 
-7.31
+  7.31
+
 - pc환경설정 셋팅 완료
 
 - 폴더구조 파악하기
@@ -239,74 +238,87 @@ back 프로젝트 테스팅 도중 발견한 것들
 - 혹은 jsp 수정후에 배포되어있는 페이지에 바로 반영시킬 수 있는 방법
 - github 사용방법 설명함
 
-
-8.3
+  8.3
 
 - React-native 전환/ui,ux 미팅/ 뀨님 미팅
 - url에 resource path가 노출되는 문제 해결. url에 요청은 제대로 했는데 도착한 웹페이지의 주소에 .do와 같은 확장자가 붙어있었다. 웹 관리자도구에서 network를 열어보니 ~.do 의 url 주소가 요청되고 있는 것이 아닌가. DNS 서비스,레코드나 web.xml에서 servlet-mapping 문제, welcome-file 등이 문제인 줄 알았는데 `RequestMapping` 문제였다. 전 담당자가 일부러 지금같은 path가 노출되도록 의도한 것 이였고 현재 노출된 path는 실제 resource 이름이 아니였다. 그래서 수정하지 않아도 됐지만 깔끔한 path를 원했으므로 25개의 파일에서 호출된 해당 경로에서(controller의 RequestMapping, return 경로 값) 값을 변경시켰다.
 
-8.4
+  8.4
 
 - .svn 지우고도 빌드/실행 잘되므로 서버로컬에서 .svn를 삭제하고 명령쉘 스크립트에서 svn명령어 지움
 - main페이지 주소에 경로 노출 안보이게 설정. welcome-file에 등록된 index.jsp에서 url 이동없이 main.jsp로 forward 시켰다.
 - CSS 미디어쿼리 수정. 타블렛에서도 navbar 보이도록 함(Chrome toggle Device Toolbar)
 - gitlab에 PR 보내고 prove, merge 하기
 
-8.5
+  8.5
 
 ### Trouble shooting
 
-에러: 햄버거버튼 클릭시 이외 영역 인터랙션, 스크롤이 비활성화 됨 
+에러: 햄버거버튼 클릭시 이외 영역 인터랙션, 스크롤이 비활성화 됨
 
 진단
 
 아 진짜 이상하게 짜놓으셨네. 모달창을 감싸고 있는 gnb_sliding_wrap 클래스 이름을 가진 div가 있는데 활성화시 on 클래스가 붙는다.
-이 div의 크기에 따라 모달 슬라이딩 제동거리가 결정된다.근데 이 div는 사실 뷰에서 다른 요소의 위에 붙어있는거라 
+이 div의 크기에 따라 모달 슬라이딩 제동거리가 결정된다.근데 이 div는 사실 뷰에서 다른 요소의 위에 붙어있는거라
 뷰에서 해당 div의 아래에 있는 요소들을 클릭하면 div가 앞에서 막고 있는 상태다. 어처구니가 없는 상황이다. background를 red로 줬더니 큰 div가 보여서 당황했다.
 여기서 내가 고려해야 할 것은... 슬라이딩/ 아래요소 클릭/ 스크롤 활성화 총 3개가 된다.
 
-
 해결
-- .gnb_sliding_wrap의 height를 0px으로, 다른 ui를 방해하지 않도록 사이즈 고정. 
-- height가 슬라이딩 제동길이로 쓰이는지 슬라이딩이 되지 않았다. 현재는 기능위주의 유지보수가 중요하기 때문에 매니저와 논의하에 효과를 과감하게 지웠다.
-- 햄버거 클릭 핸들러에서$('html').addClass('fixed') 를 주석처리 했다. 추가된 class가 없으므로 html에 'fixed' 클래스를 지우는 코드도(removeClass('fixed')) 주석처리
 
+- .gnb_sliding_wrap의 height를 0px으로, 다른 ui를 방해하지 않도록 사이즈 고정.
+- height가 슬라이딩 제동길이로 쓰이는지 슬라이딩이 되지 않았다. 현재는 기능위주의 유지보수가 중요하기 때문에 매니저와 논의하에 효과를 과감하게 지웠다.
+- 햄버거 클릭 핸들러에서\$('html').addClass('fixed') 를 주석처리 했다. 추가된 class가 없으므로 html에 'fixed' 클래스를 지우는 코드도(removeClass('fixed')) 주석처리
 
 오늘 버그 수정하면서 깨달은 것은, 남이 짠 코드에서 이슈를 해결하는 과정은 자연스레 아래 순서를 따른다는 것.
 
 남이 짠 코드 이슈 해결과정
+
 - 문제 인식
 - 해당부분 코드 분석
 - 에러 진단
 - 해결방법 찾기
 - 코드수정 해결
 
+  8.6
 
-8.6
 - 기존 사이트 프론트엔드 유지보수
 - figma툴 이용해 웹페이지 컴포넌트 설계
 
-8.7
+  8.7
+
 - 기존 사이트 프론트엔드 유지보수
 - 노마드코더에서 react 강의 시청
 - react-native 개발환경 설치 (nodejs,npm,expo,expo-client)
 - figma툴 이용해 웹페이지 컴포넌트 설계
 
-8.10
+  8.10
+
 - android 애뮬레이터 설치
 - gitlab 웹앱 로컬로 가져와 pc, 안드로이드 애뮬레이터에서 웹브라우저 테스트
 
-8.11
+  8.11
+
 - 유지보수 CSS 정
 - 새로운 웹앱 컴포넌트 UI
 - 클라이언트와 기획 미팅
 
-8.12
+  8.12
+
 - 기술 자문회의 (React와 Redux 세미나)
 - wiki에 commit convention 작성
 
 유지보수 알바에서 새 프로젝트 개발자로 본격적으로 투입될 것 같다.
 Coding Convention, React 컴포넌트 기반 개발, nextJS, Redux(+Saga), reverse proxy 등 앞으로 공부해야 하는 것들.
 
+8.13
 
+- 개발자 다현님 미팅
+- expo 앱 삭제 후 TM에게 받은 프로젝트 간단한 핸들
+- 개발환경 셋팅(node,svn 설치)
+- nextjs,proxy,redux를 포함한 시스템 구조 파악
 
+  8.14
+
+- HOC+Readux 동작 플로우 구조 파악
+- NextJS 동적 라우팅 사용
+- SD 영입 문제 상의
