@@ -5,8 +5,9 @@
 [Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
 GitLab 형상관리 <br/>
 Spring 프론트단 유지보수 <br/>
-React (redux, redux-saga, nextJs) <br/>
-
+React hoc,hooks <br/>
+NextJS
+Legacy migration
 
 ## 2020.07
 
