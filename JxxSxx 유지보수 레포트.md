@@ -410,12 +410,19 @@ SSL, 로드밸런서 포트, DNS, tomcat, 포트 직접접근 설정 및 방화�
 - 로그코드 삽입 후 tomcat log파일 분석
 
 8.21 금
+- 이날 오후에 사무실에 CTO님이 오셨다. https 보안에 관한 얘기를 했는데 http에서 https를 요청하는건 괜찮지만 https에서 보안의 위험이 있는 http를 요청하는건 매우 위험한 일이라고 했다. 클라이언트에서 요청한 서버가 의도대로 요청한 서버가 진짜 맞는지를 제3자가 인증하는게 SSL 디지털 인증서라고 한다.
 
 8.24 월
+- React Hooks 개념 이해하기 
+- fork한 저장소의 브랜치에서 작업하느라 fetch가 밀려있었다. 모두가 origin/master와 동일하도록 fetch 했다.
+- legacy 수정하려 했으나 통신 에러 발생으로 다른 기능에서 에러가 발생할까봐 복사해놨던 war를 다시 복구시켰다. 위험했다. 날짜별로 카피떠놓은 나에게 리스펙.. 제일 좋은건 http<->https 통신하도록 설정, 이미지 로딩 안되는 이유 찾는건데 새 개발이 루즈해지는 리스크를 감당할 수 없었다. 개발이 한시가 급한 상황인듯 싶다.
+
+- Commit convention/Github-flow/Code convention를 채택했다.
+- 배포전략이란 CI/CD자동화, 커밋규칙 강제화로 개발자는 커밋/푸시만 하고 배포에는 신경쓰지 않도록 하는게 좋다고 한다.
 
 <img src="/img/system1" width="150px" height="80px">
 
-오늘 CTO님의 자문이 있었다. 개발 로컬에서 빌드/실행 테스트를 하는것도 좋지만 최대한 배포환경과 비슷하게 만드는 것과 더불어 반자동화 시키기 위해 스크립트로 CD를 만들었다. 
+오후에는 CTO님의 자문이 있었다. 개발 로컬에서 빌드/실행 테스트를 하는것도 좋지만 최대한 배포환경과 비슷하게 만드는 것과 더불어 반자동화 시키기 위해 스크립트로 CD를 만들었다. 
 고정IP를 할당받는 문제로 인스턴스를 생성하지 않고 기존의 인스턴스에 프로젝트를 올려야 했다. 그래서 준CD가 되었는데 PC에서 깃에 프로젝트를 Push하고 쉘스크립트를 실행하면 인스턴스에서 git을 당겨와 자동으로 빌드/배포를 한다.
 이 과정을 수행하기 위해 필요한 작업은 아래와 같다.
 - 인스턴스에서 NextJS 실행을 위해 우분투 버전에 부합하는 npm,npx,nodejs를 설치했다.
@@ -429,9 +436,37 @@ SSL, 로드밸런서 포트, DNS, tomcat, 포트 직접접근 설정 및 방화�
 - pm2은 설치도 명령어도 좀 까다로운 것 같던데... 아주 유용한 녀석이니 관리 프로세스 생성,삭제,이름 수정정도로 조금 다룰 줄 알면 좋을 것 같다.
 - 마지막으로 dns와 nginX 설정. dns에 서브호스트네임을 레코드로 등록해놓고 nginX에서 브라우저로부터 서브호스트네임이 포함된 요청이 들어오면 NextJS 포트, 아니면 다른 설정포트를 요청하도록 했다.
 
+- ubuntu 명령어를 볼 수 있는 사이트를 추천받았는데. 이것도 기억이 잘 안난다.
 
 
 
+8.28
+
+**Google Tag Manger 사용하기**
+
+- (V) 1. 기존 GA에 데이터가 잘 들어오는지 확인
+- (V) 2. V1에 GTM 스크립트 삽입
+- (V) 3. V1의 GA 스크립트를 GTM으로 옮김
+- (V) 4. 기존 GA에 데이터가 계속 잘 들어오는지 확인
+- (V) 5. V1의 특정 페이지 특정 영역에 V2 컴포넌트 삽입
+- (V) 5-1. GTM Trigger 등록  
+- (V) 5-2. GTM Tag 등록
+- (V) 5-3. 컴포넌트 생성
+
+
+**로그인 공유 (SSO)**
+
+- (V) 1. V1에서 토큰 생성
+- (V) 2. V1에서 프론트로 토큰 전송
+- 3. V2에서 토큰 해독
+- 4. V2 화면에서 토큰 내용 보여주기
+
+관련 자료
+- https://jwt.io/#debugger
+- https://tools.ietf.org/html/rfc7519#section-4.1.4
+- https://tools.ietf.org/html/rfc7519#section-4.3
+- https://blog.udemy.com/java-integer-to-string/?utm_source=adwords&utm_medium=udemyads&utm_campaign=DSA_Catchall_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_88010211481_._ad_437497337004_._kw__._de_c_._dm__._pl__._ti_dsa-449490803887_._li_1009871_._pd__._&matchtype=b&gclid=EAIaIQobChMIy7Dk_8i96wIVy6qWCh2q5ANFEAAYASAAEgKcn_D_BwE
+- https://github.com/auth0/java-jwt
 
 
 
