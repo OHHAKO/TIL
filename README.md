@@ -1,12 +1,17 @@
 # Today I Learn
 
+## 2020.09
+NextJS <br/>
+Gsheet api 사용 <br/>
+미니프로젝트
+
 ## 2020.08
 
 [Algorithm Online Study](https://github.com/TheCopiens/algorithm-study) <br/>
 GitLab 형상관리 <br/>
 Spring 프론트단 유지보수 <br/>
 React hoc,hooks <br/>
-NextJS
+NextJS <br/>
 Legacy migration
 
 ## 2020.07
