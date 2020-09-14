@@ -1,9 +1,11 @@
 # Today I Learn
 
 ## 2020.09
+
 NextJS <br/>
 Gsheet api 사용 <br/>
-미니프로젝트
+NextJS 미니프로젝트 <br/>
+[데이터분석모델 스터디 참관](https://github.com/OHHAKO/TIL/blob/master/anaylyze/model_summary.md)
 
 ## 2020.08
 
