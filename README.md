@@ -1,5 +1,11 @@
 # Today I Learn
 
+## 2020.10
+
+NextJS <br/>
+NetworkX <br/>
+CSS <br/>
+
 ## 2020.09
 
 NextJS <br/>
