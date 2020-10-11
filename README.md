@@ -9,7 +9,7 @@ CSS <br/>
 ## 2020.09
 
 NextJS <br/>
-Gsheet api 사용 <br/>
+ORM Sequelize <br/>
 NextJS 미니프로젝트 <br/>
 [데이터분석모델 스터디 참관](https://github.com/OHHAKO/TIL/blob/master/anaylyze/model_summary.md)
 
