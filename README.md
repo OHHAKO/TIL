@@ -1,5 +1,11 @@
 # Today I Learn
 
+#### Queue
+
+[LINE Blockhain Platform](https://blockchain.line.biz/)
+
+## 2020.11
+
 ## 2020.10
 
 NextJS <br/>
