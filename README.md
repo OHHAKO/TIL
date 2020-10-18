@@ -3,8 +3,10 @@
 ## 2020.10
 
 NextJS <br/>
-NetworkX <br/>
-CSS <br/>
+[CSS(공식문서 참조)](https://developer.mozilla.org/en-US/docs/Web/CSS) <br/>
+ORM Sequelize(MySql) <br/>
+docker <br/>
+D3.js <br/>
 
 ## 2020.09
 
