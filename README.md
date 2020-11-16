@@ -6,13 +6,16 @@
 
 ## 2020.11
 
+NextJS <br/>
+CSS(animating, formal production design) <br/>
+D3.js <br/>
+
 ## 2020.10
 
 NextJS <br/>
 [CSS(공식문서 참조)](https://developer.mozilla.org/en-US/docs/Web/CSS) <br/>
-ORM Sequelize(MySql) <br/>
+Sequelize(ORM for MySql) <br/>
 docker <br/>
-D3.js <br/>
 
 ## 2020.09
 
