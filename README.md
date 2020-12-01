@@ -4,11 +4,17 @@
 
 [LINE Blockhain Platform](https://blockchain.line.biz/)
 
+## 2020.12
+
+NextJS <br/>
+CSS(animating, business design) <br/>
+basic HTTP Authentication <br/>
+
+
 ## 2020.11
 
 NextJS <br/>
 CSS(animating, formal production design) <br/>
-D3.js <br/>
 
 ## 2020.10
 
