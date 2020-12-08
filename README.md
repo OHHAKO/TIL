@@ -7,9 +7,9 @@
 ## 2020.12
 
 NextJS <br/>
-CSS(animating, business design) <br/>
-basic HTTP Authentication <br/>
-
+UX 퍼블리셔(CSS Styling and animating, webGL) <br/>
+basic HTTP Authentication 인증방식<br/>
+Google Cloud Run using docker <br/>
 
 ## 2020.11
 
