@@ -4,17 +4,24 @@
 
 [LINE Blockhain Platform](https://blockchain.line.biz/)
 
+## 2021.1
+NextJS <br/>
+MDX <br/>
+UI, UX  (Corporation product)  <br/>
+[mini site for CSS](https://github.com/OHHAKO/frontAction-boilerplate)
+
 ## 2020.12
 
 NextJS <br/>
-UX 퍼블리셔(CSS Styling and animating, webGL) <br/>
+UI, UX <small> using by hook mehtod</small> (Corporation product) <br/>
 basic HTTP Authentication 인증방식<br/>
 Google Cloud Run using docker <br/>
 
 ## 2020.11
 
 NextJS <br/>
-CSS(animating, formal production design) <br/>
+UI, UX <small> with design system </small> (Corporation product) <br/>
+Modern CSS,
 
 ## 2020.10
 
