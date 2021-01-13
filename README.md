@@ -4,7 +4,7 @@
 
 [LINE Blockhain Platform](https://blockchain.line.biz/)
 
-## 2021.1
+## 2021.1~2
 NextJS <br/>
 MDX <br/>
 UI, UX  (Corporation product)  <br/>
