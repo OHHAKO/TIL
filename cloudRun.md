@@ -125,8 +125,10 @@ steps:
   - "713134822564-compute@developer.gserviceaccount.com"
   - "--memory"
   - "128M"
+timeout: 1500s
 images:
 - gcr.io/$PROJECT_ID/web:$COMMIT_SHA
+
 
 ```
 
