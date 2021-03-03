@@ -113,7 +113,7 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'kt-cloud-front'
+  - 'CLOUD-BUILD-PROJECT-NAME'
   - '--image'
   - 'gcr.io/$PROJECT_ID/web:$COMMIT_SHA'
   - '--region'
@@ -122,7 +122,7 @@ steps:
   - 'managed'
   - "--allow-unauthenticated"
   - "--service-account"
-  - "713134822564-compute@developer.gserviceaccount.com"
+  - "nnnnnn-compute@developer.gserviceaccount.com"
   - "--memory"
   - "128M"
 timeout: 1500s
