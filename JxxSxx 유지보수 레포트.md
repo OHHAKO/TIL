@@ -165,7 +165,7 @@ and the repository exists.
 결국 key는 두개가 등록된 셈이다. 다시 push 시도. 그리고 또 발생한 에러메세지.
 
 ```
-ubuntu@ip-172-26-6-237:~/git/jungle_front$ git push -u origin master
+ubuntu@ip-xxx-xx-x-xxx:~/git/jungle_front$ git push -u origin master
 Counting objects: 6, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
