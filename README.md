@@ -5,9 +5,8 @@
 [LINE Blockhain Platform](https://blockchain.line.biz/)
 
 ## 2021.03
-Google Analytics Study
-Semantic Markup <br/>
-Accessibility <br/>
+Google Analytics Study <br/>
+Accessibility(Semantic Markup) <br/>
 JavaScript <br/>
 웹 기초 공부 <br/>
 
